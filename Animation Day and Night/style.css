@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height:100vh;
+    position:relative;
+    width:100vw;
+    overflow:hidden;
+    animation-name: bg;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    transition: all 0.25s ease;
+}
+
+.movie {
+    position:relative;
+    /* top:0;
+    left:0; */
+    height:100%;
+    width:100%;
+    animation-name: action;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    transition: all .25s ease;
+    z-index: 11;
+}
+
+.sun {
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    border:2px solid #fff099;
+    position:absolute;
+    top:250px;
+    left:-110px;
+    animation-name: sun-move;
+    animation-duration: 18s;
+    /* animation-delay: 10s; */
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    /* animation-delay: 2s; */
+    animation-fill-mode: forwards;
+    z-index:10;
+}
+
+.moon {
+    font-size:100px;
+    color:gold;
+    position:absolute;
+    top:250px;
+    left:-110px;
+    animation-name:moon-move;
+    animation-duration: 18s;
+    animation-delay: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    z-index:10;
+  }
+  
+  .clouds {
+    position:absolute;
+    top:0;
+    right: 0;
+    z-index:15;
+    width:100%;
+    height:100%;
+    margin:0 auto;
+    animation-name: clouds;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  .cars {
+    position:absolute;
+    bottom: 25px;
+    right: 0;
+    z-index: 15;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    animation-name: cars;
+    animation-duration: 15s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  
+  /*    Animation      */
+
+  @keyframes action {
+    0% {background-image: url('https://i.imgur.com/9da8G3f.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center bottom;
+        opacity: 0.8;
+    }
+    5% {opacity: 1;}
+    20% {}
+    30% {}
+    45% {opacity: 1;}
+    50% {background-image: url('https://i.imgur.com/9da8G3f.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center bottom; opacity: 0.8;}
+    51% {background-image: url('https://i.imgur.com/fdivE4R.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center bottom; 
+        opacity: 0.8;}
+    55% {opacity: 1;}
+    80% {}
+    95% {opacity: 1;}
+    100% {background-image: url('https://i.imgur.com/fdivE4R.png');
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center bottom; opacity: 0.8;}
+  }
+
+  @keyframes bg {
+      0% {background: linear-gradient(to bottom, #2F80ED, #56CCF2); opacity: 0.7;}
+      10% { opacity: 1;}
+      20% {}
+      30% {}
+      45% {opacity: 1;}
+      50% {background: linear-gradient(to bottom, #2F80ED, #56CCF2); opacity: 0.8;}
+      51% {background: linear-gradient(180deg, #000b18 1%, #00172d 15%, rgba(0,38,77,1) 30%, rgba(2,56,110,1) 60%, rgba(0,73,141,1) 80%, rgba(0,82,162,1) 100%); opacity: 0.8;}
+      55% {opacity: 1;}
+      80% {}
+      95% {opacity: 1;}
+      100% {background: linear-gradient(180deg, rgba(0,11,24,1) 1%, rgba(0,23,45,1) 15%, rgba(0,38,77,1) 30%, rgba(2,56,110,1) 60%, rgba(0,73,141,1) 80%, rgba(0,82,162,1) 100%); opacity: 0.8;}
+      
+  }
+  
+  @keyframes sun-move {
+    0% {opacity: 1; top:40%; left:-5%; background-color:#FFF57B;}
+    5% {top:25%; left:10%; background-color:#FFE469;}
+    10% {top:15%; left:20%; background-color:#FFE469;}
+    15% {top:10%; left:30%; background-color:#FECC51;}
+    20% {top:5%; left:40%; background-color:#FECC51;}
+    25% {top:3%; left:50%; background-color:#FECC51;}
+    30% {top:5%; left:60%; background-color:#FCB033;}
+    35% {top:10%; left:70%; background-color:#FCB033;}
+    40% {top:15%; left:80%; background-color:#FA961B;}
+    45% {top:25%; left:90%; background-color:#FA961B;}
+    50% {top:40%; left: 100%; opacity:1; background-color:#FA8607;}
+    55% {opacity: 0; top:20%; left:110%;}
+    60% {display: none; visibility: hidden;}
+    65% {}
+    70% {}
+    75% {}
+    80% {}
+    85% {}
+    90% {}
+    95% {}
+    100% {opacity: 0; display: none; visibility: hidden; top:40%; left:-5%; background-color:#FFF57B;}
+  }
+
+  @keyframes moon-move {
+    0% {opacity: 1; top:40%; left:-5%;}
+    5% {top:25%; left:10%;}
+    10% {top:15%; left:20%;}
+    15% {top:10%; left:30%;}
+    20% {top:5%; left:40%;}
+    25% {top:3%; left:50%;}
+    30% {top:5%; left:60%;}
+    35% {top:10%; left:70%;}
+    40% {top:15%; left:80%;}
+    45% {top:25%; left:90%;}
+    50% {top:40%; left: 100%; opacity:1;}
+    55% {opacity: 0; top:20%; left:110%;}
+    60% {display: none; visibility: hidden;}
+    65% {}
+    70% {}
+    75% {}
+    80% {}
+    85% {}
+    90% {}
+    95% {}
+    100% {opacity: 0; display: none; visibility: hidden;top:40%; left:-5%;}
+  }
+  
+  @keyframes clouds {
+    0% {top: 0; left: 120%;
+        background-image: url('https://i.imgur.com/YnZEsJA.png'), url('https://i.imgur.com/DcWTdTA.png');
+        background-repeat: no-repeat;
+        background-size: 70% 80%, 70% 80%;
+        background-position: right -100px top, right 400px top;}
+    25% {}
+    26% {}
+    50% {top:0%; left: -200%;}
+    100% {}
+  }
+  
+  @keyframes cars {
+    0% {
+      background-image: url('https://i.imgur.com/hchtKDR.png');
+      background-repeat: no-repeat;
+      background-size: 15% 15%;
+      background-position: right -10% bottom 20px;
+      bottom: 20px; right: -10%;}
+    25% {}
+    26% {}
+    50% {
+      background-image: url('https://i.imgur.com/hchtKDR.png');
+      background-repeat: no-repeat;
+      background-size: 15% 15%;
+      background-position: left -10% bottom 20px;
+      bottom: 20px; left: -10%;}
+
+    51% {
+      background-image: url('https://i.imgur.com/iyQKMef.png');
+      background-repeat: no-repeat;
+      background-size: 15% 15%;
+      background-position: left -20% bottom 20px;
+      bottom: 20px; left: -20%;}
+    
+    100% {
+      background-image: url('https://i.imgur.com/iyQKMef.png');
+      background-repeat: no-repeat;
+      background-size: 15% 15%;
+      background-position: right -10% bottom 20px;
+      bottom: 20px; right: -10%;}
+  }
+  
+  
