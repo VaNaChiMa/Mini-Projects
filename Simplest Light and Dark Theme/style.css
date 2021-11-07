@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    transition: background 0.25s ease;
+}
+
+body.dark {
+    background-color: #292c35;
+}
+
+body.dark p {
+    color: #fff;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+    width: 70%;
+    transition: color 0.25s ease;
+    line-height: 1.5;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.label {
+    position: relative;
+    width: 70px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    background: #111;
+    border-radius: 50px;
+    margin-bottom: 50px;
+}
+
+.ball {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+
+/* .checkbox:checked + .label {
+    background-color: green;
+} */
+.checkbox:checked + .label  .ball {
+    transform: translateX(35px);
+}
+
+.fa-moon {
+    color: #f1c40f;
+}
+
+.fa-sun {
+    color: #f39c12;
+}
+
+.bigSunMoon {
+  position: relative;
+}
+
+.bigSunMoon .fa-moon{
+    color: #f1c40f;
+    font-size: 5rem;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    opacity: 0;
+    transition: all 0.7s ease;
+}
+
+.bigSunMoon .fa-sun {
+    color: #f39c12;
+    font-size: 5rem;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    opacity: 1;
+    transition: all 0.7s ease;
+}
+
+.bigSunMoon .fa-moon.dayAndNight {
+    opacity: 1;
+}
+
+.bigSunMoon .fa-sun.dayAndNight {
+   opacity: 0;
+}
