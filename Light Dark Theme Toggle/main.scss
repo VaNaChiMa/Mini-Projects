@@ -26,6 +26,7 @@ body {
     justify-content: center;
     background-color: var(--bg);
     overflow: hidden;
+    position: relative;
 }
 
 .container {
@@ -118,7 +119,6 @@ html.transition *::after {
   left: 0;
   width: 100vw;
   height: 150vh;
-  align-self: flex-start;
 }
 
 .bigSunMoon.dayAndNight {
@@ -130,8 +130,7 @@ html.transition *::after {
     font-size: 5rem;
     position: absolute;
     top: 10px;
-    right: 50%;
-    transform: translateX(-50%);
+    right: 45%;
     opacity: 0;
     transition: all 0.75s ease;
 }
@@ -141,14 +140,14 @@ html.transition *::after {
     font-size: 5rem;
     position: absolute;
     top: 10px;
-    right: 50%;
+    right: 45%;
     opacity: 1;
+    z-index: 5;
     transition: all 0.75s ease;
 }
 
 .bigSunMoon .fa-moon.dayAndNight {
     opacity: 1;
-    transform: translateX(-50%);
 }
 
 .bigSunMoon .fa-sun.dayAndNight {

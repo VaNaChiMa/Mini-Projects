@@ -15,6 +15,7 @@ html {
     align-items: center;
     min-height: 100vh;
     width: 100%;
+    background-color: azure;
 }
 
 .squares {
@@ -30,6 +31,7 @@ html {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    background-color: #fff;
     width: 200px;
     height: 220px;
     padding: 20px;
@@ -45,6 +47,17 @@ html {
     transform: translateY(-2px);
 }
 
+.squares div a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+    color: #495670;
+    width: 100%;
+    height: 100%;
+}
+
 .squares div img {
     width: 100%;
     height: auto;
@@ -57,13 +70,14 @@ h1 {
     font-weight: 300;
     font-size: 2.5rem;
     margin-bottom: 20px;
+    color: #0a192f;
 }
 
 .squares div h2 {
     text-align: center;
     font-family: 'Monserrat'sans-serif;
     font-weight: normal;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 
