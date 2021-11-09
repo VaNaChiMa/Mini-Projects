@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-  margin: 0 auto;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,6 +28,8 @@ h1 {
   margin: auto;
   border: 3px #fff solid;
   border-radius: 8px;
+  width: 100%;
+  height: auto;
 }
 
 button {
@@ -55,6 +57,7 @@ button:active {
 .slider-container {
   position: relative;
   z-index: 50;
+  width: 50%;
 }
 
 .controls #prev {
