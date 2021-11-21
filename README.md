@@ -11,3 +11,4 @@
 5. 4 squares & 4 squares 2 + Animation
 6. Simplest Light and Dark Theme + '.checkbox:checked + .label'
 7. Light Dark Theme + CSS Var + Grid + SASS
+8. Color game + JS + Grid
