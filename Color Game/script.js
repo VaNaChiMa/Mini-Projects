@@ -2,11 +2,11 @@
 const myBtn = document.querySelector('#myBtn');
 const myHeading = document.querySelector('h1');
 const container = document.querySelector('.container');
-const squares = document.querySelector('.square');
+const squares = document.querySelectorAll('.square');
 let count = 0;
+let squaresCount = [];
 let colors = [];
-console.log(typeof squares);
-console.log(squares);
+
 
 myBtn.addEventListener('click', function() {
     const r = Math.floor(Math.random() * 255);
@@ -16,28 +16,28 @@ myBtn.addEventListener('click', function() {
     document.body.style.backgroundColor = newColor;
     myHeading.innerText = newColor;
     
-    // myBtn.style.color = newColor;
     if(r + g + b <= 150) {
         myHeading.style.color = "#fff"
      } else {
          myHeading.style.color = "#000"
      }
 
-        
+    function returnColor() {
+        return newColor;
+    }
+    
+    colors.push(returnColor());
+    console.log(colors);
 
-    // squares.forEach(function(
-    //     for (var i = 0; i < colors.length; i++) {
-    //         squares.style.backgroundColor[i];
-    //     }
-    // ))
+    createSquare();
 
-     createSquare();
-
-
+    for (let i = 0; i < squaresCount.length; i++) {
+        for (let a = 0; a < colors.length; a++) {
+            squaresCount[a].style.backgroundColor = colors[a];
+        }
+    }
 
 });
-
-
 
 function createSquare() {
     const squareColor = document.createElement("div");
@@ -45,11 +45,12 @@ function createSquare() {
     container.appendChild(squareColor);
     squareColor.className = "square";
     squareColor.style.backgroundColor = '#fff';
+    
     count+=1;
     squareColor.innerHTML = count;
-    // colors.push(newColor);
-    //     console.log(colors);
 
+    squaresCount.push(squareColor);
+    console.log(squaresCount);
 }
 
 
