@@ -1,8 +1,8 @@
 # Mini-Projects
 
-[All projects in one page](https://trusting-bhabha-c67443.netlify.app/)
-
 ### that help me learn technologies
+
+[All projects in one page](https://trusting-bhabha-c67443.netlify.app/)
 
 ---
 
