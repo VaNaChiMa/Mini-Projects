@@ -1,35 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
+      integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7"
+      crossorigin="anonymous"
+    />
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <script
+      src="https://kit.fontawesome.com/21155fc47d.js"
+      crossorigin="anonymous"
+    ></script>
 
+    <link rel="stylesheet" href="style.css" />
 
-
-    <link rel="stylesheet" href="style.css">
-    <title>jQuery Slider - Quick & Easy</title>
-</head>
-<body>
+    <title>Image Slider</title>
+  </head>
+  <body>
     <div class="container">
-        <h1>JQSlider</h1>
-        <div class="slider-outer">
-            <i class="fas fa-chevron-circle-left" id="prev"></i>
-            <div class="slider-inner">
-                <img src="images/image2.jpg" class="active" alt="image">
-                <img src="images/image1.jpg" alt="image">
-                <img src="images/image3.jpg" alt="image">
-                <img src="images/image4.jpg" alt="image">
-            </div>
-            <i class="fas fa-chevron-circle-right" id="next"></i>
+      <h1>Awesome nature</h1>
+
+      <div class="slider-container">
+        <img
+          class="pictures"
+          src="https://picsum.photos/id/128/700/500"
+          alt=""
+        />
+
+        <div class="controls">
+          <button id="prev"><i class="fas fa-arrow-left"></i></button>
+          <button id="next"><i class="fas fa-arrow-right"></i></button>
         </div>
+      </div>
     </div>
 
-
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
