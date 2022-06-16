@@ -10,8 +10,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 55%;
-    height: 70vh;
+    justify-content: center;
+    width: 70%;
+    height: 100vh;
     margin: 30px auto;
 }
 

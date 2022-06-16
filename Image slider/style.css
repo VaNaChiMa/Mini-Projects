@@ -1,80 +1,71 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
 
 body {
-  background: linear-gradient(to top right, #0575e6, #00f260) no-repeat;
-  height: 100vh;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.container {
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.fa-chevron-circle-left, .fa-chevron-circle-right {
+    font-weight: 900;
+    font-size: 3rem;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
 }
 
 h1 {
-  text-align: center;
-  margin: 20px auto;
-  color: #fff;
+    text-align: center;
 }
 
-.pictures {
-  display: block;
-  margin: auto;
-  border: 3px #fff solid;
-  border-radius: 8px;
-  width: 100%;
-  height: auto;
+.container {
+    width: 540px;
+    margin: 40px auto;
+    overflow: auto;
 }
 
-button {
-  display: block;
-  padding: 10px 30px;
-  color: #00c09d;
-  border-radius: 5px;
-  outline: none;
-  transition: 0.3s;
-  border: 0;
-  cursor: pointer;
-  opacity: 0.8;
+.slider-inner {
+    width: 500px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    float: left;
+    padding: 3px;
+    border: #666 solid 1px;
+    margin: auto;
 }
 
-button:hover {
-  color: #00c09d;
-  background: #fff;
-  opacity: 0.9;
+.slider-inner img {
+    display: none;
+    width: 500px;
+    height: 300px;
 }
 
-button:active {
-  transform: scale(0.95);
+.slider-inner img.active {
+    display: inline-block;
 }
 
-.slider-container {
-  position: relative;
-  z-index: 50;
-  width: 50%;
+#prev, #next {
+    margin-top: 130px;
+    cursor: pointer;
+    float: left;
 }
 
-.controls #prev {
-  position: absolute;
-  top: 50%;
-  left: -70px;
-  transform: translate(-50%);
-  z-index: -1;
-}
-.controls #next {
-  position: absolute;
-  top: 50%;
-  right: -150px;
-  transform: translate(-50%);
-  z-index: -1;
+#prev {
+    position: relative;
+    margin-right: -45px;
+    z-index: 100;
 }
 
-.controls button i {
-  font-size: 1.5rem;
+#next {
+    position: relative;
+    margin-left: -45px;
+    z-index: 100;
 }
