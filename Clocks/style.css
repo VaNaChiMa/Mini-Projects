@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@900&family=Roboto&display=swap");
+
+:root {
+  --bg-white: #fff;
+  --bg-grey: #f4f7fc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  background-color: var(--bg-grey);
+}
+
+.container {
+  min-height: 100vh;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.bg-image {
+  width: 50%;
+  height: 50%;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  transition: all 0.3 ease;
+}
+
+.clocks {
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.main-clock {
+  width: 80%;
+  background-color: rgba(144, 238, 144, 0.5);
+  margin: 50px;
+  padding: 10px 40px;
+  border: 1px solid rgba(0, 128, 0, 0.5);
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-size: 4rem;
+  color: #333;
+  transition: 0.35s ease;
+}
+
+.main-clock:hover {
+  transform: scale(1.2);
+  background-color: rgba(0, 128, 0, 0.8);
+  color: #fff;
+}
+
+.main-clock h3 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.clock {
+  text-align: center;
+}
