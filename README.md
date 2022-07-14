@@ -2,7 +2,7 @@
 
 ### that help me learn technologies
 
-[All projects in one page](https://trusting-bhabha-c67443.netlify.app/)
+[All projects on one page](https://trusting-bhabha-c67443.netlify.app/)
 
 ---
 
