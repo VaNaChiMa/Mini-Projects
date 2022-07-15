@@ -1,3 +1,12 @@
+const clock = document.querySelector(".clock");
+const chisinau = document.querySelector("#chisinau");
+const newYork = document.querySelector("#new-york");
+chisinau.addEventListener("click", function () {});
+
+newYork.addEventListener("click", function () {
+  startTime();
+});
+
 function startTime() {
   const now = new Date();
 
@@ -9,15 +18,7 @@ function startTime() {
   m = checkNumber(m);
   s = checkNumber(s);
 
-  document.querySelector(".clock").innerHTML = h + " : " + m + " : " + s;
-  // document.querySelector(".clockNewYork").innerHTML =
-  //   h - 7 + " : " + m + " : " + s;
-  // document.querySelector(".clockTokyo").innerHTML =
-  //   h + 6 + " : " + m + " : " + s;
-  // document.querySelector(".clockBuenosAires").innerHTML =
-  //   h - 6 + " : " + m + " : " + s;
-  // document.querySelector(".clockCapeTown").innerHTML =
-  //   h + 1 + " : " + m + " : " + s;
+  document.querySelector(".clock").innerHTML = `${h}:${m}:${s}`;
 
   setTimeout(startTime, 1000);
 }
@@ -32,4 +33,21 @@ function checkNumber(i) {
 
 startTime();
 
-const images = [];
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach((button) => {
+  button.addEventListener("click", function () {
+    removeActiveClasses();
+    if (button.className === "") {
+      button.classList.add("active");
+    } else {
+      button.classList.remove("active");
+    }
+  });
+});
+
+function removeActiveClasses() {
+  buttons.forEach((button) => {
+    button.classList.remove("active");
+  });
+}

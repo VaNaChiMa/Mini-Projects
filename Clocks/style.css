@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@900&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Rubik+Mono+One&family=Share+Tech+Mono&display=swap");
 
 :root {
   --bg-white: #fff;
@@ -14,7 +14,9 @@
 body {
   font-family: "Roboto", sans-serif;
   line-height: 1.5;
-  background-color: var(--bg-grey);
+  background-color: #2a2a2a;
+  background: radial-gradient(ellipse at center, #00008b 0%, #000000 75%);
+  background-size: 100%;
 }
 
 .container {
@@ -27,56 +29,57 @@ body {
   margin: auto;
 }
 
-.bg-image {
-  width: 50%;
-  height: 50%;
-  margin: 0 auto;
-}
-
-img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  transition: all 0.3 ease;
-}
-
 .clocks {
-  width: 700px;
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
 }
 
 .main-clock {
-  width: 80%;
-  background-color: rgba(144, 238, 144, 0.5);
-  margin: 50px;
-  padding: 10px 40px;
-  border: 1px solid rgba(0, 128, 0, 0.5);
+  min-width: 500px;
+  margin-bottom: 100px;
+}
+
+.cities {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cities button {
+  padding: 15px 30px;
+  background-color: transparent;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 900;
-  font-size: 4rem;
-  color: #333;
-  transition: 0.35s ease;
-}
-
-.main-clock:hover {
-  transform: scale(1.2);
-  background-color: rgba(0, 128, 0, 0.8);
+  margin: 0 20px 20px 0;
   color: #fff;
+  font-size: 1.2rem;
+  transition: 0.2s ease;
 }
 
-.main-clock h3 {
-  text-align: center;
-  font-weight: 500;
-  font-size: 1.5rem;
-  margin-top: 10px;
+.cities button.active {
+  color: #030358;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.cities button:hover {
+  color: #030358;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.cities button:active {
+  transform: scale(0.98);
 }
 
 .clock {
   text-align: center;
+  padding: 20px;
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  font-family: "Rubik Mono One", sans-serif;
+  font-weight: 400;
+  font-size: 4rem;
 }
