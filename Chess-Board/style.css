@@ -1,85 +1,117 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.text-content {
+  margin-bottom: 30px;
 }
 
 .container p {
-    margin-bottom: 50px;
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .chessBoard {
-    border: 1px solid teal;
-    display: flex;
-    position: relative;
+  border: 1px solid teal;
+  display: flex;
+  position: relative;
 }
 
 .chessBoard::after {
-    content: "";
-    background: none;
-    border: 3px solid teal;
-    display: block;
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
+  content: "";
+  background: none;
+  border: 3px solid teal;
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
 }
 
 .column {
-    display: flex;
-    flex-direction: column-reverse;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .chessBoard .column > div {
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: flex-end;
-    z-index: 5;
-    cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: flex-end;
+  z-index: 5;
+  cursor: pointer;
 }
 
 .column > div:nth-child(even) {
-    background-color: #fff;
-    color: teal;
+  background-color: #fff;
+  color: teal;
 }
 
 .column > div:nth-child(odd) {
-    background-color: teal;
-    color: #fff;
+  background-color: teal;
+  color: #fff;
 }
 
 .columnB > div:nth-child(odd) {
-    background-color: #fff;
-    color: teal;
+  background-color: #fff;
+  color: teal;
 }
 
 .columnB > div:nth-child(even) {
-    background-color: teal;
-    color: #fff;
+  background-color: teal;
+  color: #fff;
 }
 
-span {
-    width: 100%;
-    height: 100%;
-    padding-top: 30px;
-    padding-left: 30px;
+.squareName {
+  opacity: 0;
 }
 
-.a {
-    opacity: 0;
+.squareName.active {
+  opacity: 1;
 }
 
-.a.active {
-    opacity: 1;
+.piece {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 2.5rem;
+  font-weight: 500;
+  width: 100%;
+  height: 100%;
+}
+
+.squareName {
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.a1 {
+  position: relative;
+}
+
+.a1::before {
+  content: "a1";
+  position: absolute;
+  top: 0;
+  left: -30px;
+  height: 50px;
+  width: 50px;
+  color: teal;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.3rem;
 }
