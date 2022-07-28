@@ -14,3 +14,4 @@
 6. [Simplest Light and Dark Theme](https://trusting-bhabha-c67443.netlify.app/simplest%20light%20and%20dark%20theme/) + '.checkbox:checked + .label'
 7. [Light Dark Theme](https://trusting-bhabha-c67443.netlify.app/light%20dark%20theme%20toggle/) + CSS Var + Grid + SASS
 8. [Color game](https://trusting-bhabha-c67443.netlify.app/color%20game/) + JS + Grid
+9. [Clocks](https://trusting-bhabha-c67443.netlify.app/clocks/) + JS + new Date();
