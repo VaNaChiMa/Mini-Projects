@@ -17,7 +17,12 @@ const timeZones = [
 for (let i = 0; i < clocks.length; i++) {
   setInterval(function tick() {
     let time = new Date();
-    time = time.toLocaleTimeString("en-US", { timeZone: timeZones[i] });
+    time = time.toLocaleTimeString("en-US", {
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      timeZone: timeZones[i],
+    });
     clocks[i].innerText = time;
     // console.log(time);
   }, 1000);
