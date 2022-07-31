@@ -75,7 +75,7 @@ body {
 .clock {
   display: none;
   text-align: center;
-  padding: 20px;
+  padding: 20px 30px;
   color: #fff;
   background-color: transparent;
   border: 1px solid #fff;
@@ -87,4 +87,35 @@ body {
 
 .clock.show {
   display: block;
+}
+
+/*   Media   */
+@media (max-width: 992px) {
+  .clock {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .clock {
+    font-size: 2.75rem;
+  }
+}
+@media (max-width: 600px) {
+  .main-clock {
+    min-width: auto;
+  }
+  .clock {
+    font-size: 2.125rem;
+  }
+}
+@media (max-width: 480px) {
+  .clock {
+    font-size: 1.575rem;
+  }
+}
+@media (max-width: 375px) {
+  .clock {
+    font-size: 1.25rem;
+  }
 }
