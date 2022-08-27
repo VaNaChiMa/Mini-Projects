@@ -2,6 +2,8 @@ const express = require("express");
 const https = require("https");
 const bodyParser = require("body-parser");
 
+require("dotenv").config();
+
 const app = express();
 
 app.use(express.static("public"));
@@ -13,11 +15,11 @@ app.get("/", function (req, res) {
 
 app.post("/", function (req, res) {
   const query = req.body.cityName;
-  const apiKey = "7d663dee3d1d9ab5ed5dbaccb4e245a4";
+  const apiKey = process.env.MY_API_KEY;
   const units = "metric";
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${apiKey}&units=${units}`;
   https.get(url, function (response) {
-    console.log(response.statusCode);
+    // console.log(response.statusCode);
 
     response.on("data", function (data) {
       const weatherData = JSON.parse(data);
@@ -60,3 +62,5 @@ app.post("/localWeather.html", function (req, res) {
 app.listen(3000, function () {
   console.log("Server is running on port 3000.");
 });
+
+console.log(process.env);
