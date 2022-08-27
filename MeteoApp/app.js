@@ -6,6 +6,10 @@ require("dotenv").config();
 
 const app = express();
 
+app.listen(process.env.PORT || 3000, function () {
+  console.log("Server is running on port 3000.");
+});
+
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -49,18 +53,9 @@ app.post("/", function (req, res) {
             <a class="location" href="index.html"></a>
         </div>
     </main>`);
-      // res.send(
-      //   `<p>The weather is currently ${description}.</p><h1>The temperature in ${query} is ${temperature} degrees Celsius.</h1><img src="${iconURL}">`
-      // );
     });
   });
 });
 app.post("/localWeather.html", function (req, res) {
   res.redirect("/");
 });
-
-app.listen(3000, function () {
-  console.log("Server is running on port 3000.");
-});
-
-console.log(process.env);
