@@ -16,3 +16,4 @@
 8. [Color game](https://trusting-bhabha-c67443.netlify.app/color%20game/) + JS + Grid
 9. [Clocks](https://trusting-bhabha-c67443.netlify.app/clocks/) + JS + new Date();
 10. [Meteo App]() + JS + API + Node.js + Express.js;
+11. [New Year Countdown](https://trusting-bhabha-c67443.netlify.app/new_year_countdown/) + JS + Date & Time
