@@ -37,8 +37,13 @@ body {
 }
 
 .main-clock {
+  display: none;
   min-width: 500px;
   margin-bottom: 100px;
+}
+
+.loading {
+  margin-bottom: 70px;
 }
 
 .cities {

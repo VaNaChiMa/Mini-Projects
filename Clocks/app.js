@@ -5,6 +5,7 @@ const newYork = document.getElementById("new-york");
 const tokyo = document.getElementById("tokyo");
 const capeTown = document.getElementById("cape-town");
 const buenosAires = document.getElementById("buenos-aires");
+const mainClock = document.querySelector(".main-clock");
 
 const timeZones = [
   "Europe/Chisinau",
@@ -27,6 +28,11 @@ for (let i = 0; i < clocks.length; i++) {
     // console.log(time);
   }, 1000);
 }
+
+setTimeout(() => {
+  loading.remove();
+  mainClock.style.display = "flex";
+}, 1000);
 
 function addActiveClasses() {
   buttons.forEach((button) => {
@@ -53,7 +59,6 @@ function addActiveClasses() {
       } else {
         button.classList.remove("active");
       }
-      // console.log(this.textContent);
     });
   });
 }
