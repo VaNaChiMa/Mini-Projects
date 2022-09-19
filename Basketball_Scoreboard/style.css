@@ -1,0 +1,177 @@
+@font-face {
+  font-family: "Cursed Timer ULiL Font";
+  src: url("files/CursedTimerUlil-Aznm.ttf");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+:root {
+  --ff-primary: "Cursed Timer ULiL Font";
+  --ff-secondary: "Roboto", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: url("files/Arena\ basketball.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* gap: 50px; */
+  color: #fff;
+  padding: 3em;
+  position: relative;
+  min-width: 500px;
+  margin: auto;
+}
+
+.container::before {
+  content: "";
+  background-color: #1b244a;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+.big_display {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 5em;
+  padding: 1em;
+}
+
+.container h1 {
+  font-family: var(--ff-secondary), sans-serif;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.container h2 {
+  font-size: 2rem;
+  letter-spacing: 5px;
+  text-align: center;
+  font-family: var(--ff-secondary);
+  text-transform: uppercase;
+}
+
+.guest_display,
+.home_display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  margin: 30px auto;
+  border: 2px solid transparent;
+}
+
+.guest_display span,
+.home_display span {
+  padding-top: 25px;
+  font-size: 10rem;
+  font-family: var(--ff-primary);
+}
+
+.btn {
+  background-color: #fff;
+  padding: 0.3em 0.5em;
+  border-radius: 5px;
+  font-family: var(--ff-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  transform: scale(0.95);
+}
+
+.btn:active {
+  transform: translateY(-2px);
+}
+
+.new_game {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em;
+}
+
+.new_game .btn {
+  font-family: var(--ff-secondary);
+}
+
+.leader {
+  border: 2px solid #fff;
+}
+
+.home_buttons,
+.guest_buttons {
+  display: flex;
+  gap: 0.5em;
+}
+
+@media (max-width: 800px) {
+  .container {
+    padding: 2em;
+    min-width: 70%;
+  }
+
+  .container h2 {
+    font-size: 1.2rem;
+  }
+
+  .guest_display span,
+  .home_display span {
+    font-size: 7rem;
+  }
+
+  .home_buttons,
+  .guest_buttons {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 1em;
+    min-width: 90%;
+  }
+
+  .container h1 {
+    font-size: 1.5rem;
+  }
+
+  .big_display {
+    gap: 2em;
+  }
+
+  .guest_display span,
+  .home_display span {
+    font-size: 5rem;
+  }
+}
