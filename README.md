@@ -18,3 +18,5 @@
 10. [Meteo App]() + JS + API + Node.js + Express.js;
 11. [New Year Countdown](https://vadim-mini-projects.netlify.app/new_year_countdown/) + JS + Date & Time
 12. [Dark Mode](https://vadim-mini-projects.netlify.app/dark_mode/) HTML + :root, var() + JS
+13. [Password Generator App](https://vadim-mini-projects.netlify.app/password_generator_app/) HTML, CSS, JS
+ 
