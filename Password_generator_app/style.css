@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+:root {
+  --clr-bg: #1c1c1c;
+  --clr-main: #fff;
+  --clr-container-bg: #1f2937;
+  --clr-result: #273549;
+  --clr-result-text: #5def92;
+  --clr-title: #4adf86;
+  --clr-text: #fff;
+  --clr-btn-bg: #10b981;
+  --clr-btn: #fff;
+}
+
+.light-theme {
+  --clr-main: #5def92;
+  --clr-container-bg: #ecfdf5;
+  --clr-result: #273549;
+  --clr-title: #273549;
+  --clr-text: #273549;
+  --clr-btn: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 10px;
+  margin: 0;
+}
+
+.container {
+  background: var(--clr-container-bg);
+  padding: 20px;
+  border-radius: 5px;
+  width: 350px;
+  max-width: 100%;
+  position: relative;
+}
+
+.container h2 {
+  margin: 10px 0 20px;
+  text-align: center;
+  color: var(--clr-title);
+  font-weight: 700;
+  /* letter-spacing: 1px; */
+}
+
+.result-container {
+  background-color: var(--clr-result);
+  color: var(--clr-result-text);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  font-size: 1.125rem;
+  letter-spacing: 1px;
+  padding: 12px 10px;
+  height: 50px;
+  width: 100%;
+}
+
+.result-container #result {
+  word-wrap: break-word;
+  max-width: calc(100% - 40px);
+}
+
+.result-container .btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 1.25rem;
+}
+
+.btn {
+  border: none;
+  background-color: var(--clr-btn-bg);
+  color: var(--clr-btn);
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.btn-large {
+  display: block;
+  width: 100%;
+  transition: 0.2s ease;
+  background-color: var(--clr-btn-bg);
+  color: var(--clr-btn);
+}
+
+.btn-large:hover {
+  transform: scale(0.98);
+}
+
+.btn-large:active {
+  transform: translateY(-1px);
+}
+
+.setting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.copied {
+  display: none;
+  position: absolute;
+  right: -20px;
+  top: 50px;
+  background-color: var(--clr-btn);
+  color: var(--clr-result);
+  border-radius: 33px;
+  padding: 5px;
+  height: 25px;
+  z-index: 3;
+  font-size: 0.8rem;
+}
+
+.copied.show {
+  display: block;
+}
+
+.themes {
+  position: absolute;
+  top: -50px;
+  right: 10px;
+  color: var(--clr-main);
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 480px) {
+  #result {
+    font-size: 0.875rem;
+  }
+
+  .copied {
+    top: 80px;
+    right: 10px;
+  }
+}
